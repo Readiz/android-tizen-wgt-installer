@@ -1,0 +1,10 @@
+OFFLINE SIMULATION — no real GitHub/Samsung/TV connection
+DOWNLOADING: [DEMO · 실제 TV 아님] demo/sample: sample.wgt 다운로드·해시 확인
+CONNECTING: [DEMO · 실제 TV 아님] SIMULATION ONLY 1.0.0 · TV 기기 ID와 기존 설치 확인
+CERTIFICATES: [DEMO · 실제 TV 아님] [데모] 합성 인증서 생성 · 삼성 로그인 생략
+SIGNING: [DEMO · 실제 TV 아님] SIMULATION ONLY 1.0.0 재서명 · 원본 manifest와 권한은 보존
+TRANSFERRING: [DEMO · 실제 TV 아님] 기기 프로파일 전송 · 개인키는 휴대폰에 유지
+INSTALLING: [DEMO · 실제 TV 아님] TV 설치 명령 실행 · 응답이 끊겨도 자동 재전송하지 않음
+VERIFYING: [DEMO · 실제 TV 아님] 설치 완료 응답·앱 목록 확인
+COMPLETE: [DEMO · 실제 TV 아님] SIMULATION ONLY 1.0.0 설치 완료. Host PC IP는 휴대폰 IP로 유지하세요. 앱 실행·재생 호환성은 별도 확인이 필요합니다.
+SIMULATION PASS: DemoWgt001 1.0.0; 2 non-private-key files; exactly one install command

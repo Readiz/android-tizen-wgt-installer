@@ -1,0 +1,36 @@
+{
+  "project": "android-tizen-wgt-installer",
+  "version": "0.2.2-experimental",
+  "core_tests": {
+    "passed": 78,
+    "failed": 0,
+    "executed": true
+  },
+  "offline_demo": {
+    "executed": true,
+    "result": "pass",
+    "real_tv": false
+  },
+  "android_sdk_build_executed": true,
+  "apk_produced": true,
+  "real_samsung_auth_tested": false,
+  "real_tv_tested": false,
+  "remote_github_repository_created": true,
+  "upstream_modified": false,
+  "repository": "https://github.com/Readiz/android-tizen-wgt-installer",
+  "last_local_verification": "2026-09-30",
+  "android_lint": {
+    "errors": 0,
+    "warnings": 9
+  },
+  "android_runtime_tested": false,
+  "live_github_jvm_tested": true,
+  "real_release_mock_install_tested": true,
+  "user_reported_device_progress": {
+    "tv_discovery": true,
+    "sdb_inventory_stage_passed": true,
+    "samsung_login_callback_passed": true,
+    "certificate_pair_completed": false,
+    "tv_install_completed": false
+  }
+}

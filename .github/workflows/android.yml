@@ -1,0 +1,43 @@
+name: WGT Installer checks
+on:
+  workflow_dispatch:
+  push:
+    paths: ['app/**', 'core/**', 'simulator/**', 'scripts/**', '*.gradle.kts', 'gradle.properties', '.github/workflows/android.yml']
+  pull_request:
+    paths: ['app/**', 'core/**', 'simulator/**', 'scripts/**', '*.gradle.kts', 'gradle.properties', '.github/workflows/android.yml']
+permissions:
+  contents: read
+concurrency:
+  group: wgt-installer-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - uses: android-actions/setup-android@v3
+        with:
+          # setup-android's default includes the unavailable legacy 'tools' package.
+          packages: 'platform-tools'
+          log-accepted-android-sdk-licenses: false
+      - name: Android SDK
+        run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0'
+      - name: Tests, APK and Android lint
+        run: gradle --no-daemon :core:check :app:assembleDebug :app:lintDebug
+      - name: Upload debug APK (no certificate fixtures)
+        uses: actions/upload-artifact@v4
+        with:
+          name: wgt-installer-debug
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 7

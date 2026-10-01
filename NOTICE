@@ -1,0 +1,22 @@
+WGT Installer for Android, experimental
+Based on the earlier TV Bootstrap prototype; generalized for arbitrary public WGT releases.
+SPDX-License-Identifier: GPL-3.0-only
+
+This implementation adapts protocol and signing conventions from:
+- SushyDev/tizen-homebrew (GPL-3.0-only), by SushyDev and contributors.
+- reisxd/tizen.js (GPL-3.0), by reisxd and contributors.
+Exact consulted files and blob SHAs appear in docs/SOURCES.md.
+
+Related prior work: Apps2Samsung, by its authors and contributors, already
+provides a standalone Android certificate/signing/SDB installation workflow.
+It is a product comparison and TV setup documentation reference; this credit
+is separate from the adapted implementation sources listed above.
+https://github.com/Apps2Samsung/Apps2Samsung
+
+Kotlin standard library is separately provided under Apache-2.0 by JetBrains
+and Kotlin contributors. Build tools and the Android SDK retain their own
+licenses. No Android SDK, Node runtime, Termux binary, or private signing key
+is redistributed in this source archive.
+
+No affiliation with or endorsement by Samsung or the upstream maintainers is
+implied. "Samsung", "Tizen" and "Android" identify compatibility targets.

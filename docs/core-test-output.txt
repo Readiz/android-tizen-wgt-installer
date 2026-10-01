@@ -1,0 +1,73 @@
+PASS  private IPv4 allowed; no DNS/network traversal
+PASS  public, loopback, padded and injected IPv4 rejected
+PASS  manifest identifiers cannot become shell injection
+PASS  JSON UTF-8/escapes/null/list round trip
+PASS  duplicate JSON keys and trailing tokens rejected
+PASS  JSON excessive nesting rejected
+PASS  XML DTD and external entity rejected
+PASS  WGT manifest and version parsed
+PASS  path traversal and absolute ZIP entries rejected
+PASS  ZIP inflated entry limit enforced
+PASS  WGT without root config rejected
+PASS  RSA CSR verified independently by OpenSSL
+PASS  distributor CSR SAN contains exact TV DUID
+PASS  certificate chain, private key and DUID validated
+PASS  wrong device certificate refused
+PASS  wrong private key refused
+PASS  credential toString does not expose secrets
+PASS  certificate persistence round trip
+PASS  encodeURIComponent compatibility (slash/space/plus/unicode)
+PASS  old signatures replaced, both new signatures present
+PASS  JDK XMLDSig independently validates both signatures and all references
+PASS  generic Public signing preserves original manifest
+PASS  release SHA-256 verified before package acceptance
+PASS  altered release digest rejected
+PASS  CSRF nonce is 256-bit and fresh
+PASS  Samsung form preserves plus/equals within token
+PASS  wrong callback state and duplicate fields rejected
+PASS  loopback callback rejects bad request, then accepts valid browser POST
+PASS  wire header fixed known magic/checksum
+PASS  wire decoder accepts single-byte TCP reads
+PASS  wire corruption and oversize lengths rejected
+PASS  real TCP mock: handshake, DUID, sequential Unicode command
+PASS  real TCP mock: negotiated max payload and ACK-before-next-write
+PASS  private-key handoff and arbitrary SDB destinations forbidden
+PASS  cancellation closes live SDB socket
+PASS  HTTP 401 is unknown, never interpreted as missing app
+PASS  applist fallback requires exact app identifier
+PASS  author mismatch and install error take priority over completion
+PASS  progress 100 is not installation completion
+PASS  already-present matching version is not proof after lost output
+PASS  new matching version can prove install after transport loss
+PASS  generic install: 401 fallback, signing, push, install; zero key handoff
+PASS  foreign-author app not overwritten even when phone has another pair
+PASS  uncertain install never automatically replays install command
+PASS  install failure cannot be masked by registry entry
+PASS  source-trust consent mandatory before network operations
+PASS  mock Samsung issuance parses nested extension, CSR and two distributor replies
+PASS  cloud HTTP refuses plaintext and unapproved redirect destinations
+PASS  LAN HTTP cannot reach another TV, public host or arbitrary port
+PASS  silent shell command obeys overall deadline
+PASS  missing sync completion cannot be counted as transferred
+PASS  truncated packet payload is rejected rather than partially accepted
+PASS  ZIP serialization uses deterministic timestamps for reproducible digests
+PASS  non-widget XML root rejected before signing
+PASS  source ZIP and TPK assets never silently treated as WGT
+PASS  draft and prerelease responses blocked
+PASS  oversized assets blocked before downloading
+PASS  history persistence failure never reported as full success
+PASS  repo shorthand and GitHub URL/.git normalized
+PASS  repo rejects credentials, foreign domains, API paths and injection
+PASS  snapshot serialization pins selected asset ID/release ID/hash
+PASS  multiple WGTs require explicit choice rather than first-file guess
+PASS  asset cannot switch repository or non-HTTPS host
+PASS  missing digest is visible metadata but blocks automatic installation
+PASS  download size mismatch blocks signing
+PASS  selected release is pinned; latest never queried again during install
+PASS  404 is ambiguous; 403/429 stop repeated requests
+PASS  same package ID from another repository refuses overwrite
+PASS  lost local Author key never silently replaced
+PASS  same app update reuses original Author key
+PASS  device-free demo uses actual signing/SDB pipeline on loopback
+PASS  demo certificate is synthetic self-signed with explicit demo DUID
+RESULT 72 passed, 0 failed
